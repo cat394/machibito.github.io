@@ -4,18 +4,44 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-family-body: serif;
+
+    --bgColor-body: #1F1F1F;
+
+    --font-size-nav: 1.3rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.8rem;
+    --font-size-p: 1.6rem;
+    --font-size-dl: 1.3rem;
+
+    --font-color-body: white;
+}
+
 /*-------------------------要素セレクタ-------------------------------------*/
 
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
-
 }
 
 body {
     margin-top: 0;
-    background-color: #1F1F1F;
-    color: #F7FCF5;
+    color: var(--font-color-body);
+    font-family: var(--font-family-body);
+    background-color: var(--bgColor-body);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+p {
+    font-size: var(--font-size-p);
 }
 
 img {
@@ -23,25 +49,16 @@ img {
     max-width: 100%;
 }
 
-a {
-    color: #E9C3DC;
-}
-
 a:hover {
     text-decoration: none;
 }
 
-ul, ol {
-    list-style: none;
+dl {
+    font-size: var(--font-size-dl);
 }
 
-button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    padding: 0;
-    appearance: none;
+ul, ol {
+    list-style: none;
 }
 
 
@@ -94,7 +111,7 @@ body::-webkit-scrollbar-thumb {
     padding: 7px;
     background-color: #4c4d53;
     color: white;
-    margin-block: 18px;
+    margin-block: 30px;
 }
 
 .link-btn:hover {
@@ -127,11 +144,14 @@ body::-webkit-scrollbar-thumb {
     width: 65%;
     padding: 20px;
     background-color: #262626;
+    
     margin: 0 0 10px 0;
     border-bottom-right-radius: 3px;
 }
 
-
+.link-list a {
+    color: #ff8cca;
+}
 
 /*-------------------------ヘッダー-------------------------------------*/
 
@@ -144,12 +164,6 @@ header h1 {
     padding: 30px;
 }
 
-header img {
-    background-color: #534d4dba;
-    stroke: aliceblue;
-    margin-bottom: 0;
-}
-
 
 
 /*-------------------------ページナビゲーション--------------------------*/
@@ -158,12 +172,11 @@ header img {
     position: sticky;
     top: 0;
     z-index: 10;
+    font-size: var(--font-size-nav);
 }
 
 #nav-links {
     display: flex;
-    padding: 10px;
-    border-radius: 20px 0 0 20px;
 }
 
 
@@ -174,13 +187,16 @@ header img {
 
 #nav-links a {
     display: block;
-    font-size: 1rem;
     padding: 15px;
-    border-inline: 1px solid white;
+    border: 1px solid white;
     border-right: none;
     background: black;
     color: white;
     text-decoration: none;
+}
+
+#nav-links li:last-child a {
+    border-right: 1px solid white;
 }
 
 
@@ -188,26 +204,9 @@ header img {
     background-color: #2F2F2F;
 }
 
-#nav-links li:nth-child(1) a {
-    border-left: none;
-    border-radius: 20px 0 0 20px;
-    border-bottom: 2px solid#DB1759;
-}
 
-#nav-links li:nth-child(2) a {
-    border-bottom: 2px solid #00C0E5;
-}
 
-#nav-links li:nth-child(3) a {
-    border-bottom: 2px solid #59D193;
-}
-
-#nav-links li:nth-child(4) a {
-    border-radius: 0 20px 20px 0;
-    border-bottom: 2px solid#EAC14D;
-}
-
-/*----------------------メインコンテンツ------------------------------*/
+/*----------------------メインコンテンツ--------------------------------*/
 
 
 /*----------------------ヒーロー--------------------------*/
@@ -237,6 +236,10 @@ main #hero img {
     place-items: center;
 }
 
+.text-image p {
+    padding-right: 15px;
+}
+
 .text-image img{
     object-fit: contain;
 }
@@ -251,7 +254,7 @@ main #hero img {
 /*----------------------コード----------------------------*/
 
 #code p {
-    line-height: 2rem;
+    line-height: 4rem;
 }
 
 
