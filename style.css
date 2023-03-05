@@ -320,7 +320,7 @@ footer {
         margin: 0;
     }
 
-    .link-list dt::after {
+    #credit .link-list dt::after {
         content: "";
     }
 
