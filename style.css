@@ -289,16 +289,7 @@ footer {
 
 /* スマホ版フッターメニュー */
 @media (max-width: 640px) {
-
-    html {
-        scroll-margin-bottom: -50vh;
-    }
-
-    h1 {
-        font-size: calc(.1rem + 5vw);
-    }
-
-
+    
     #page-nav a {
         padding: 0;
         font-size: calc(.1rem + 4vw);
