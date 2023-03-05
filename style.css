@@ -30,7 +30,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 15vh;
 }
 
 body {
@@ -288,6 +288,10 @@ footer {
 /*-------------------------メディアクエリ----------------------------------*/
 
 @media (max-width: 640px) {
+    
+    html {
+        scroll-margin-top: -20vh;
+    }
 
     h1 {
         font-size: calc(.1rem + 5vw);
