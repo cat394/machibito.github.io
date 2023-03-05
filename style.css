@@ -180,7 +180,7 @@ body::-webkit-scrollbar-thumb {
 /*-------------------------ヘッダー-------------------------------------*/
 
 header {
-    background-color: #3A3A3A;
+    background-color: var(--bgColor-header);
 }
 
 header h1 {
@@ -287,10 +287,11 @@ footer {
 
 /*-------------------------メディアクエリ----------------------------------*/
 
+/* スマホ版フッターメニュー */
 @media (max-width: 640px) {
-    
+
     html {
-        scroll-margin-top: -20vh;
+        scroll-margin-bottom: -50vh;
     }
 
     h1 {
