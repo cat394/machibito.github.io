@@ -254,7 +254,7 @@ main #hero img {
 }
 
 .text-image p {
-    padding-right: 15px;
+    padding-right: var(--font-size-p);
 }
 
 .text-image img{
