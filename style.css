@@ -342,11 +342,11 @@ footer {
 
     .info-list dl {
         flex-direction: column;
+        margin: 0;
     }
 
     .info-list dl dt {
         width: 100%;
-        margin: 0;
     }
 
     #home-credit .info-list dt::after {
@@ -355,7 +355,6 @@ footer {
 
     .info-list dl dd {
         width: 100%;
-        margin: 0;
         border-bottom: 1px solid #ffffff;
     }
 
