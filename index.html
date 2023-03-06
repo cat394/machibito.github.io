@@ -1,69 +1,61 @@
 <html lang="ja">
-    <head prefix="og:http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
         <title>待ち人</title>
         <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <meta name="description" content="こちらは、ノベルゲーム『待ち人』の公式サイトです。使用した素材のクレジット表記や実際に使用したコードへのリンクを掲載しております。">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-
-        <meta property="og:title" content="待ち人">
-        <meta property="og:description" content="こちらは、ノベルゲーム『待ち人』の公式サイトです。使用した素材のクレジット表記や実際に使用したコードへのリンクを掲載しております。">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://cat394.github.io/machibito.github.io/">
-        <meta property="og:image" content="https://cat394.github.io/machibito.github.io/images/hero-small.png">
-        <meta property="og:site_name" content="『待ち人』公式サイト">
-        <meta property="og:locale" content="ja_JP">
-
     </head>
     <body>
         <header>
-             <h1>『待ち人』公式ページ</h1>
+            <h1>『待ち人』公式ページ</h1>
         </header>
-        <nav id="page-nav">
-            <ul id="nav-links">
-                <li><a href="#story"><span>あらすじ</span><img src="images/book-mark.svg"></a></li>
-                <li><a href="#credit"><span>クレジット</span><img src="images/link.svg"></a></li>
-                <li><a href="#music"><span>使用楽曲</span><img src="images/music.svg"></a></li>
-                <li><a href="#code"><span>コード</span><img src="images/code.svg"></a></li>
+        <div id="page-nav">
+            <ul class="text-center">
+                <li><a href="#home-synopsis">あらすじ<img alt="" src="images/book-mark.svg"></a></li>
+                <li><a href="#home-credit">クレジット<img alt="" src="images/link.svg"></a></li>
+                <li><a href="#home-music">使用楽曲<img alt="" src="images/music.svg"></a></li>
+                <li><a href="#home-code">コード<img alt="" src="images/code.svg"></a></li>    
             </ul>
-        </nav>
+        </div>
         <main>
             <div id="hero">
-                <img srcset="images/hero-small.png 320w, images/hero-medium.png 640w, images/hero-large.png 1280w" src="images/hero-large.png" sizes="(max-width:1280px) 100vw, 1280px">
+                <img alt="夕焼け空を背景に『待ち人』という文字が右上に配置されている" srcset="images/hero-small.png 320w, images/hero-medium.png 640w, images/hero-large.png 1280w" src="images/hero-large.png" sizes="(max-width:1280px) 100vw, 1280px">
             </div>
-            <div id="story">
+            <div id="main-contents">
                 <div class="container text-center">
-                    <section  class="contents">
-                        <h2>あらすじ</h2>
-                        <div>
-                            <ol>
+                    <section id="home-synopsis">
+                        <div class="title">
+                            <h2>あらすじ</h2>
+                        </div>
+                        <div class="contents">
+                            <ol id="synopsis-list" class="text-image-list">
                                 <li class="text-image">
-                                    <p>夕暮れ時の神社へ通う一人の男がいた。</p>
-                                    <img srcset="images/image1-small.png 320w, images/image1-medium.png 640w, images/image1-large.png 1280w" src="images/image1-large.png" sizes="(max-width:1280px) 100vw, 1280px">
+                                    <p>夕暮れ時に神社へ通う一人の男がいた。</p>
+                                    <img alt="夕日を浴びている社殿" srcset="images/image1-small.png 320w, images/image1-medium.png 640w, images/image1-large.png 1280w" src="images/image1-large.png" sizes="(max-width:1280px) 100vw, 1280px">
                                 </li>
                                 <li class="text-image">
                                     <p>彼の目的は一体なんだろうか。</p>
-                                    <img srcset="images/image2-small.png 320w, images/image2-medium.png 640w, images/image2-large.png 1280w" src="images/image2-large.png" sizes="(max-width:1280px) 100vw, 1280px">
+                                    <img alt="日が暮れて暗くなっている社殿" srcset="images/image2-small.png 320w, images/image2-medium.png 640w, images/image2-large.png 1280w" src="images/image2-large.png" sizes="(max-width:1280px) 100vw, 1280px">
                                 </li>
                                 <li class="text-image">
                                     <p>ある日、一人の先客がそこにいた。</p>
-                                    <img srcset="images/image3-small.png 320w, images/image3-medium.png 640w, images/image3-large.png 1280w" src="images/image3-large.png" sizes="(max-width:1280px) 100vw, 1280px">
+                                    <img alt="雨の日の石段" srcset="images/image3-small.png 320w, images/image3-medium.png 640w, images/image3-large.png 1280w" src="images/image3-large.png" sizes="(max-width:1280px) 100vw, 1280px">
                                 </li>
                                 <li class="text-image">
                                     <p>彼と彼女は何を語りだすのだろうか。</p>
-                                    <img srcset="images/image4-small.png 320w, images/image4-medium.png 640w, images/image4-large.png 1280w" src="images/image4-large.png" sizes="(max-width:1280px) 100vw, 1280px">
+                                    <img alt="夕日が山際へ落ちる直前の真っ赤な鳥居" srcset="images/image4-small.png 320w, images/image4-medium.png 640w, images/image4-large.png 1280w" src="images/image4-large.png" sizes="(max-width:1280px) 100vw, 1280px">
                                 </li>
                             </ol>
                         </div>
-                    </section>    
+                    </section>
                 </div>
-            </div>
-            <div id="credit">
                 <div class="container text-center">
-                    <section class="contents">
-                        <h2>クレジット</h2>
-                        <div>
-                            <ul  class="link-list">
+                    <section id="home-credit">
+                        <div class="title">
+                            <h2>クレジット</h2>
+                        </div>
+                        <div class="contents">
+                            <ul id="credit-list" class="info-list">
                                 <li>
                                     <dl>
                                         <dt>制作者</dt>
@@ -111,70 +103,75 @@
                         </div>
                     </section>
                 </div>
-            </div>
-            <div id="music">
                 <div class="container text-center">
-                    <section class="contents">
-                        <h2>使用楽曲</h2>
-                        <ul  class="link-list">
-                            <li>
-                                <dl>
-                                    <dt>タイトル</dt>
-                                    <dd><a href="https://music.yukizakura.net/free/yassun/001.html" target="_blank">farewell time</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>メイン</dt>
-                                    <dd><a href="https://pocket-se.info/archives/1840/" target="_blank">秋風吹く庭で</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>挿入曲</dt>
-                                    <dd><a href="https://ontama-m.com/ongaku_piano2.html" target="_blank">想いを抱いて</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>エンド</dt>
-                                    <dd><a href="http://musicmaterial.jpn.org/piano3.htm" target="_blank">AUTUMN WINDOW</a></dd>
-                                </dl>
-                            </li>
-                        </ul>    
-                    </div>    
-                </section>
-            </div>
-            <div id="code">
-                <div class="container text-center">
-                    <section class="contents">
-                        <h2>コード</h2>
-                        <p>TyranoScriptのコードはGithubで公開しています。</p>
-                        <br>
-                        <p>これを使用することで開発が楽になるかもしれません。</p>
-                        <div id="github" class="grid-center">
-                            <a href="https://github.com/cat394/machibito-Tyrano-code" class="link-btn" target="_blank">
-                                <img src="images/github-icon.svg" alt="Twitterの青い鳥のアイコン" width="69" height="69">
-                                <span class="text">Github</span>
-                            </a>    
-                        </div>    
+                    <section id="home-music">
+                        <div class="title">
+                            <h2>使用楽曲</h2>
+                        </div>
+                        <div class="contents">
+                            <ul class="info-list">
+                                <li>
+                                    <dl>
+                                        <dt>タイトル</dt>
+                                        <dd><a href="https://music.yukizakura.net/free/yassun/001.html" target="_blank">farewell time</a></dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>メイン</dt>
+                                        <dd><a href="https://pocket-se.info/archives/1840/" target="_blank">秋風吹く庭で</a></dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>挿入曲</dt>
+                                        <dd><a href="https://ontama-m.com/ongaku_piano2.html" target="_blank">想いを抱いて</a></dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>エンド</dt>
+                                        <dd><a href="http://musicmaterial.jpn.org/piano3.htm" target="_blank">AUTUMN WINDOW</a></dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
                     </section>
-                    </div>    
+                </div>
+                <div class="container text-center">
+                    <section id="home-code">
+                        <div class="title">
+                            <h2>コード</h2>
+                        </div>
+                        <div class="contents">
+                            <p>TyranoScriptのコードはGithubで公開しています。</p>
+                            <br>
+                            <p>これを使用することで開発が楽になるかもしれません。</p>
+                            <div id="github-btn">
+                                <a class="link-btn" href="https://github.com/cat394/machibito-Tyrano-code" target="_blank">
+                                    <img src="images/github-icon.svg" alt="Twitterの青い鳥のアイコン" width="69" height="69">
+                                    <span>Github</span>
+                                </a>    
+                            </div> 
+                        </div>
+                    </section>
                 </div>    
             </div>
         </main>
-        <footer class="text-center">
-            <div id="sns">
-                <p>制作者のSNSアカウント</p>
-                <div id="twitter" class="grid-center">
-                    <a href="https://mobile.twitter.com/ryo_5748" class="link-btn">
-                        <img src="images/twitter-icon.svg" alt="Twitterの青い鳥のアイコン" width="69" height="69">
-                        <span class="text">Twitter</span>
-                    </a>    
+        <footer>
+            <div class="text-center">
+                <div id="sns">
+                    <p>制作者のSNSアカウント</p>
+                    <div id="twitter-btn" class="grid-center">
+                        <a class="link-btn"href="https://mobile.twitter.com/ryo_5748">
+                            <img src="images/twitter-icon.svg" alt="Twitterの青い鳥のアイコン" width="69" height="69">
+                            <span class="text">Twitter</span>
+                        </a>    
+                    </div>
                 </div>
-            </div>
-            <div id="copyright">
-                <p class="text-center">©りょう</p>
+                <div id="copyright">
+                    <p>©りょう</p>
+                </div>
             </div>
         </footer>
     </body>
