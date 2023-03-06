@@ -5,28 +5,53 @@
 }
 
 :root {
-    --font-family-body: serif;
+    --fontFamily-body: serif;
 
     --bgColor-body: #1F1F1F;
     --bgColor-header: #3A3A3A;
     --bgColor-footer: #292929;
-    
+    --bgColor-link-btn: #4c4d53;
 
-    --font-size-nav: 1.3rem;
-    --font-size-h1: clamp(1.4rem, 1.0127rem + 1.6526vw, 2.5rem);
-    --font-size-h2: clamp(1.3rem, 0.7014rem + 2.5540vw, 3rem);
-    --font-size-p: clamp(0.8rem, 0.5183rem + 1.2019vw, 1.6rem);
-    --font-size-dl: clamp(1rem, 0.8944rem + 0.4507vw, 1.3rem);
+    --fontSize-h1: clamp(1.4rem, 1.0127rem + 1.6526vw, 2.5rem);
+    --fontSize-h2: clamp(1.3rem, 0.7014rem + 2.5540vw, 3rem);
+    --fontSize-p: clamp(0.8rem, 0.5183rem + 1.2019vw, 1.6rem);
+    --fontSize-dl: clamp(1rem, 0.8944rem + 0.4507vw, 1.3rem);
 
-    --font-color-body: white;
-    --font-color-link-list-a: #ff8cca;
+    --fontColor-body: #ffffff;
+    --fontColor-a: #ffffff;
+    --fontColor-info-list-a: #ff8cca;
 
+    --zIndex-page-nav: 10;
+    --width-container: 85%;
 }
 
 
 
+/* 
+    スクロールバーのカスタマイズ
+ */
 
-/*-------------------------要素セレクタ-------------------------------------*/
+
+ body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #5961df;
+    background: linear-gradient(180deg, #5961df 0%, #f574b9 100%);
+    border-radius: 25%;
+}
+
+
+
+/* 
+    要素セレクタ
+ */
+
 
 html {
     scroll-behavior: smooth;
@@ -36,23 +61,27 @@ html {
 body {
     max-width: 1440px;
     margin-top: 0;
-    color: var(--font-color-body);
-    font-family: var(--font-family-body);
+    color: var(--fontColor-body);
+    font-family: var(--fontFamily-body);
     background-color: var(--bgColor-body);
 }
 
+header {
+    background-color: var(--bgColor-header);
+}
+
 h1 {
-    font-size: var(--font-size-h1);
+    font-size: var(--fontSize-h1);
     font-weight: bold;
 }
 
 h2 {
-    font-size: var(--font-size-h2);
+    font-size: var(--fontSize-h2);
     font-weight: bold;
 }
 
 p {
-    font-size: var(--font-size-p);
+    font-size: var(--fontSize-p);
 }
 
 img {
@@ -61,7 +90,7 @@ img {
 }
 
 a {
-    color: white;
+    color: #ffffff;
 }
 
 a:hover {
@@ -69,7 +98,7 @@ a:hover {
 }
 
 dl {
-    font-size: var(--font-size-dl);
+    font-size: var(--fontSize-dl);
 }
 
 ul, ol {
@@ -78,7 +107,12 @@ ul, ol {
 
 
 
-/*-------------------------共通CSS-------------------------------------*/
+/* 
+    便利なclassセット
+ */
+
+
+/* 配置系 */
 
 .text-center {
     text-align: center;
@@ -89,12 +123,12 @@ ul, ol {
     place-content: center;
 }
 
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+/* コンテナ系 */
+
 .container {
+    width: var(--width-container);
+    margin: auto;
     margin-top: 30vw;
 }
 
@@ -102,145 +136,132 @@ ul, ol {
     margin-bottom: 10vh;
 }
 
-.contents {
-    width: 85%;
-    margin: auto;
-}
 
-
-
-body::-webkit-scrollbar {
-    width: 7px;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: #1e1e24;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: rgb(89,97,223);
-    background: linear-gradient(180deg, rgba(89,97,223,1) 0%, rgba(245,116,185,1) 100%);
-    border-radius: 25%;
-}
-
+/* リンクボタン */
 
 .link-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    border: 1px solid white;
+    justify-content: center;
+    padding: 7px;
+    margin-block: 30px;
+    background-color: #4c4d53;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     text-decoration: none;
-    padding: 7px;
-    background-color: #4c4d53;
-    margin-block: 30px;
 }
 
 .link-btn:hover {
     background: #292929;
-    transition: .7s;
 }
 
-.link-list ul {
+
+/* インフォメーションリスト */
+
+.info-list ul {
     list-style: none;
     text-align: center;
 }
 
-.link-list dl {
+.info-list dl {
     display: flex;
 }
 
-.link-list dt {
+.info-list dl dt {
     width: 35%;
-    background-color: #404040;
-    margin-bottom: 10px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
     display: flex;
-    padding: 10px;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    margin-bottom: 1.2vh;
+    background-color: #404040;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
-.link-list dd {
+.info-list dl dd {
     width: 65%;
     padding: 20px;
+    margin-bottom: 1.2vh;
     background-color: #262626;
-    
-    margin: 0 0 10px 0;
     border-bottom-right-radius: 3px;
 }
 
-.link-list a {
-    color: var(--font-color-link-list-a);
+.info-list a {
+    color: #ff8cca;
 }
 
 
 
-/*-------------------------ヘッダー-------------------------------------*/
+/*
+    ヘッダー
+ */
 
-header {
-    background-color: var(--bgColor-header);
-}
 
 header h1 {
     padding: clamp(0.3rem, -0.0521rem + 1.5023vw, 1.3rem);
 }
 
 
-/*-------------------------ページナビゲーション--------------------------*/
 
-#page-nav {
+/*
+    ページナビゲーションバー
+ */
+
+
+ #page-nav {
     position: sticky;
     top: 0;
     z-index: 10;
-    font-size: var(--font-size-nav);
+    font-size: 1.3rem;
 }
 
 #page-nav img {
     margin: auto;
 }
 
-#nav-links {
+#page-nav ul {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 
-#nav-links a {
+#page-nav ul a {
     padding: 15px;
     display: block;
-    border: 1px solid white;
+    border: 1px solid #ffffff;
     border-right: none;
-    background: black;
+    background: #000000;
     text-decoration: none;
-    text-align: center;
 }
 
-#nav-links li:last-child a {
-    border-right: 1px solid white;
+#page-nav ul li:last-child a {
+    border-right: 1px solid #ffffff;
 }
 
 
-#nav-links a:hover {
+#page-nav ul a:hover {
     background-color: #2F2F2F;
 }
 
 
 
-/*----------------------メインコンテンツ--------------------------------*/
+/*
+    メインコンテンツ
+ */
 
 
-/*----------------------ヒーロー--------------------------*/
+/* ヒーロー */
 
 main #hero img {
     width: 100vw;
 }
 
 
-/*----------------------ストーリー------------------------*/
+/* あらすじ */
 
-#story ol {
+.text-image-list {
     display: flex;
     flex-direction: column;
     gap: 8rem;
@@ -253,7 +274,7 @@ main #hero img {
 }
 
 .text-image p {
-    padding-right: var(--font-size-p);
+    padding-right: var(--fontSize-p);
 }
 
 .text-image img{
@@ -262,75 +283,89 @@ main #hero img {
 
 
 
-/*----------------------クレジット----------------------------*/
+/* 
+    クレジット
+ */
 
-#credit dt::after {
+
+#home-credit dt::after {
     content: "：";
 }
 
 
-/*-------------------------フッター----------------------------------*/
-#code #github {
-    margin-top: 20px;
-}
 
-/*-------------------------フッター----------------------------------*/
+/* 
+    フッター
+ */
+
 
 footer {
     background-color: var(--bgColor-footer);
-    padding-block: 25px;
+    padding-block: 5vh;
     margin-top: 150px;
 }
 
 
 
-/*-------------------------メディアクエリ----------------------------------*/
 
-/* スマホ版フッターメニュー */
+/* 
+    メディアクエリ
+ */
+
+
+/* スマホで、ページナビゲーションを下に配置する */
+
 @media (max-width: 640px) {
-    
-    #page-nav a {
+
+    html {
+        scroll-margin-top: 0;
+    }
+
+    #page-nav ul {
+        position: fixed;
+        bottom: 0;
+    }
+
+    #page-nav ul a {
         padding: 0;
         font-size: calc(.1rem + 4vw);
     }
 
-    #nav-links {
-        position: fixed;
-        bottom: 0;
-    }
+    footer {
+        padding-bottom: 15vh;
+     }
 }
 
-/* link-listの崩壊を防ぐ */
+
+/* info-listの崩壊を防ぐ */
+
 @media (max-width: 868px) {
-    .link-list dl {
+
+    .info-list dl {
         flex-direction: column;
     }
 
-    .link-list dt {
+    .info-list dl dt {
         width: 100%;
         margin: 0;
     }
 
-    #credit .link-list dt::after {
+    #home-credit .info-list dt::after {
         content: "";
     }
 
-    .link-list dd {
+    .info-list dl dd {
         width: 100%;
         margin: 0;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid #ffffff;
     }
 
-    .link-list dl dd:last-child {
-        margin-bottom: 8vh;
+    .info-list dl dd:last-child {
+        margin-bottom: 7vh;
     }
 
-     .link-list li:last-child dd:last-child {
+     .info-list li:last-child dd:last-child {
         margin-bottom: 0;
      }
 
-
-     footer {
-        padding-bottom: 10vh;
-     }
 }
